@@ -1,0 +1,7 @@
+<app-header></app-header> 
+
+
+<app-basket-container></app-basket-container>
+
+<app-dishes *ngFor="let Container of dishes.dishesArray; let i = index" 
+[title]= "dishes.dishesArray[i]['title']" ></app-dishes>
