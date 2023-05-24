@@ -1,7 +1,20 @@
 <app-header></app-header> 
 
 
-<app-basket-container></app-basket-container>
+<app-basket-container>
 
-<app-dishes *ngFor="let Container of dishes.dishesArray; let i = index" 
-[title]= "dishes.dishesArray[i]['title']" ></app-dishes>
+
+
+</app-basket-container>
+
+
+
+<app-dishes *ngFor="let container of dishes.dishesArray; let i = index" 
+[title]= "dishes.dishesArray[i]['titel']" 
+[content]="container['content']"
+[menuContent]="container['menuContent']"
+[price]="container['price']" >
+
+</app-dishes>
+
+

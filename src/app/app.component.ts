@@ -9,7 +9,7 @@ import { Dishes } from './dishes';
 export class AppComponent implements OnInit {
   dishes= new Dishes();
 
-  test = ['1'];
+test = 'test';
 
 
 ngOnInit() {
