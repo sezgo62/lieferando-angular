@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dishes } from './dishes';
+import { DishesServiceService } from './dishes-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,12 @@ import { Dishes } from './dishes';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  dishes= new Dishes();
 
-test = 'test';
 
+
+constructor(public fs: DishesServiceService) {
+            
+}
 
 ngOnInit() {
 
