@@ -1,5 +1,59 @@
 <div class="basketContainer">
 
-    
+    <div class="dishItem" *ngFor="let basketItem of fs.basket; let i = index">
+        <span class="amountText">{{basketItem['amount']}}</span> <span class="titleText">{{basketItem['title']}}</span>
+        <span class="sumText">{{basketItem['price']}}€</span>
+
+        <div class="buttonsContainer">
+            <button (click)="fs.removeAmount(i)"> - </button> 
+            <button (click)="fs.addDish(basketItem['title'], basketItem['price'])"> + </button>
+        </div>
+
+    </div>
+
+    <div class="payInformationItem" id="payInformationItem" [class.d-none]= "fs.isActive">
+        <div class="childContainer-1">
+            <span>Zwichensumme:</span><span>{{fs.sum}}€</span>
+        </div>
+
+        <div class="childContainer-1">
+            <span>Lieferkosten:</span><span>2€</span>
+        </div>
+        <div class="childContainer-1">
+            <span>Gesamt:</span><span>{{fs.sum + 2}}€</span>
+        </div>
+    </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---- <div class="dishContainer" *ngFor="let basketItem of fs.basket; let i = index" >
+
+    <div class="dishItem">
+        <div>{{ fs.amount }}</div>    
+        <div>0</div>$
+    </div>
+
+    <div><div>Lieferkosten</div>    <div>0</div>$</div>
+    <div><div>Gesamt</div>          <div>0</div>$</div>
+
+
+   
+
+</div>-->

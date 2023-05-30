@@ -4,4 +4,57 @@
     height: 75.8vh;
     position: fixed;
     right: 0;
+    
+}
+
+
+.dishContainer {}
+
+.dishItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    border: solid 1px black;
+    flex-direction: column;
+}
+
+.amountText {
+    position: absolute;
+    left: 10px;
+}
+
+.titleText {}
+
+.sumText {
+    position: absolute;
+    right: 10px;
+}
+
+.payInformationItem {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-around;
+    //align-items: center;
+    height: 100px;
+    border: solid 1px black;
+}
+
+.childContainer-1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+}
+
+.-d-none {
+    display: none;
 }
